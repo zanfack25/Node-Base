@@ -9,8 +9,8 @@ phases:
     commands:
       - echo Building custom NodeJS base image...
       - docker build -t nodejs-base .
-      - docker tag nodejs-base:latest 123456789012.dkr.ecr.ca-central-1.amazonaws.com/nodejs-base:latest
+      - docker tag nodejs-base 123456789012.dkr.ecr.ca-central-1.amazonaws.com/nodejs-base
   post_build:
     commands:
       - echo Pushing base image to ECR...
-      - docker push 123456789012.dkr.ecr.ca-central-1.amazonaws.com/nodejs-base:latest
+      - docker push 123456789012.dkr.ecr.ca-central-1.amazonaws.com/nodejs-base
